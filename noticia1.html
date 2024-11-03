@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título da Notícia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Suez+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f8f7f7;
+        }
+
+        /* Header */
+        .header {
+            z-index: 1;
+            width: 100%;
+            height: 25vh;
+            position: fixed;
+            top: 0%;
+            justify-content:space-around;
+            text-align: center;
+            border-bottom: #797979 1px solid;
+            background-color: rgb(255, 255, 255);
+
+        }
+
+        .logo {
+            font-size: 20px;
+            font-family: 'Noticia Text';
+            color: #000000;
+        }
+
+        .menu a {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #000000;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        #menu a:hover {
+            font-weight: bold;
+            border-bottom: #000000 2px solid;
+        }
+        /* Barra de progresso */
+        .progress-container {
+            width: 100%;
+            height: 5px;
+            background-color: #e0e0e0;
+            position: fixed;
+            top: 25.vh;
+            left: 0;
+            z-index: 9999;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background-color: #4caf50;
+        }
+        /* Content */
+        .content {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            padding-top: 30vh; /* Para evitar sobreposição com o header */
+        }
+
+        .title {
+            font-family: 'Noticia Text';
+            font-size: 35px;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .subtitle {
+            font-family: 'Poppins';
+            font-size: 14px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .meta-info {
+            font-size: 12px;
+            padding-bottom: 15px;
+            color: #000000;
+            font-family: 'Poppins';
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        .content-text {
+            font-family: 'Poppins';
+            font-size: 16px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+ <!-- Barra de progresso -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <header class="header" id="header"> 
+        <div class="logo" id="logo">
+            <h1>The Gardem</h1>
+        </div>
+
+        <div class="menu" id="menu">
+            <a href="index.html"> Página Inicial</a>
+            <a href="sobre.html"> Sobre </a>
+            <a href="contato.html"> Contato </a>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal da notícia -->
+    <div class="content">
+        <div class="head">
+            <p class="meta-info">Por Marcelo Fonseca - 14 de novembro de 2024</p>
+            <h1 class="title">EXCLUSIVO: Kamala tem 48% e Trump soma 47% em Wisconsin, mostra pesquisa</h1>
+            <p class="subtitle">Nova pesquisa aponta vantagem de 3 pontos da vice-presidente sobre Trump, que venceu no estado em 2016 e 2020</p>
+        </div>
+        <img src="amazoniamacron.webp" alt="Descrição da Imagem" class="image">
+        <div class="content-text">
+            <p>Uma nova pesquisa do Des Moines Register/Mediacom mostra que a vice-presidente dos EUA, Kamala Harris, supera Donald Trump em Iowa, estado onde o ex-presidente venceu nas duas últimas eleições.
+
+
+                Com 47% das intenções de voto, Harris se encontra 3 pontos à frente de Trump, que tem 44%. A pesquisa foi realizada pela Selzer & Co. de 28 a 31 de outubro e possui margem de erro de 3,4 pontos percentuais.
+                
+                Veja também
+                Washington trabalha nos preparativos para as eleições americanas
+                Entenda a diferença entre Republicanos e Democratas nas eleições dos EUA
+                Harris e Trump começam o último fim de semana de campanha
+                A mudança em Iowa chamou a atenção dos observadores políticos dos EUA. O estado é considerado como uma vitória dos republicanos, e faz parte da estratégia de Trump para chegar à Casa Branca. A Selzer & Co acertou com boa margem todos os resultados em Iowa nos últimos anos.
+                
+                “Essa é uma pesquisa que surpreende bastante. Não somente pelo resultado que coloca Iowa em disputa a essa altura mas pela tradição que essa publicação tem naquele estado”, diz Mauricio Moura, professor da Universidade George Washington e sócio do fundo Zaftra, da Gauss Capital.
+                
+                Voto feminino em disputa
+                O levantamento destaca uma mudança no apoio das mulheres e independentes, que agora tendem a preferir Harris.
+                
+                Entre as mulheres, Harris possui 56% contra 36% de Trump, enquanto entre os independentes a vice-presidente registra 46%, com Trump em 39%. Entre os eleitores mais velhos, Harris lidera com 55% das intenções, enquanto Trump se sai melhor entre os homens, com 52%.
+                
+                
+                Com 91% dos eleitores dizendo que já decidiram seu voto, a eleição em Iowa representa uma virada inesperada no cenário republicano, que via o estado como garantido na disputa presidencial.</p>
+            <p>Mais um parágrafo para ilustrar o conteúdo da matéria.</p>
+        </div>
+    </div>
+
+    <script>
+        // Atualiza a largura da barra de progresso conforme a rolagem da página
+        window.onscroll = function() {
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrollPercentage = (scrollTop / scrollHeight) * 100;
+            document.getElementById("progress-bar").style.width = scrollPercentage + "%";
+        };
+    </script>
+
+</body>
+</html>
