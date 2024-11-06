@@ -10,7 +10,7 @@ html, body{
 .header{
     z-index: 1;
     width: 100%;
-    height: 25vh;
+    height: 22vh;
     position: fixed;
     top: 0%;
     justify-content:space-around;
@@ -78,9 +78,11 @@ html, body{
   .item p{
     font-family: 'Poppins';
     font-weight: 300;
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .text :hover{
     border-bottom: #000000 2px solid;
   }
+
+  
