@@ -16,7 +16,7 @@
             margin: 0px;
             padding: 0px;
             width: 100%;
-            min-height: 200vh;
+            min-height: 370vh;
             overflow: auto;
             font-size: 16px;
         }
@@ -93,23 +93,6 @@
         .menu a:hover {
             border-bottom: #2C3C20 2px solid;
         }
-
-        .progress-container {
-            width: 100%;
-            height: 5px;
-            background-color: #e0e0e0;
-            position: fixed;
-            top: 25.vh;
-            left: 0;
-            z-index: 9999;
-        }
-
-        .progress-bar {
-            height: 100%;
-            width: 0%;
-            background-color: #2C3C20;
-        }
-
         .content {
             max-width: 800px;
             margin: auto;
@@ -126,8 +109,8 @@
 
         .subtitle {
             font-family: 'Poppins';
-            font-size: 14px;
-            color: #555;
+            font-weight: 300;
+            font-size: 18px;
             margin: 10px 0;
         }
 
@@ -194,16 +177,44 @@
         .related-news a:hover {
             text-decoration: underline;
         }
+        /* Rodapé */
+        footer {
+            background-color: #2C3C20 ;
+            font-family: 'poppins';
+            color: white;
+            text-align: center;
+            font-size: 12px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 560px;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 20px;
+        }
+        
     </style>
 </head>
 <body>
- <!-- Barra de progresso -->
-    <div class="progress-container">
-        <div class="progress-bar" id="progress-bar"></div>
-    </div>
     <header class="cabeçalho">
         <div class="top-bar">
-            <p>©2024 The Gardem | Blog de Biologia</p>
+            <p>Blog de Biologia</p>
         </div>
         <div class="header">
             <h1 class="logo">THE GARDEM</h1>
@@ -218,37 +229,54 @@
     </header>
 
     <!-- Conteúdo principal da notícia -->
-    <div class="content">
-        <div class="head">
-            <h1 class="title">Reprodução das Plantas</h1>
-        </div>
-        <img src="amazoniamacron.webp" alt="Descrição da Imagem" class="image">
-        <div class="meta-info">
-            <img src="luiza.jpg" alt="Foto do Autor">
-            <p>Por <span class="highlight">Luíza Matos </span>- 06 de novembro de 2024</p>
-        </div>
-        <div class="content-text">
-            <h1>As Plantas e o Ecossistema</h1>
-            <p>As <span class="highlight">plantas</span> são essenciais para a vida na Terra, são responsáveis por gerar oxigênio, alimento, fibras, combustíveis e remédios que permitem aos humanos e outras formas de vida existir. Elas também são essenciais para o controle da temperatura da Terra e o equilíbrio e dinâmica da água no planeta. Enquanto realizam tudo isso, as plantas ainda absorvem dióxido de carbono, um importante gás do efeito estufa, através da fotossíntese.</p>
-            
-            <h1>Agricultura e a Biodiversidade</h1>
-            <p>Desde os primórdios da humanidade, o homem criou o <span class="highlight">"hábito"</span>, por assim dizer, de juntar sementes e plantar, e durante toda a história podemos observar o desenvolvimento dessa prática, que hoje já é bem avançada, a agricultura. Por mais que muitas pessoas não reparem, as plantas foram e são, os pilares da prática agrícola, assim, movimentando a subsistência, a economia e principalmente da produção de alimentos, todo alimento que consumimos provém das plantas.</p>
-
-            <p>Até o gado que comemos, que por sua vez, depende das plantas para se alimentar. Em outras palavras, plantas são a base de quase todas as teias alimentares, ou o que os ecólogos chamam de nível trófico. Sem contar na questão da <span class="highlight">biodiversidade</span>: "As plantas, por exemplo, são a base de toda a cadeia alimentar, além de servirem de moradia para algumas espécies e fornecerem oxigênio no processo de fotossíntese. Quando uma espécie entra em extinção, todo o ecossistema local é impactado."</p>
-
-            <h1>Ecossistemas equilibrados e sua destruição</h1>
-            <p>Um <span class="highlight">ecossistema equilibrado</span> é aquele onde há harmonia entre os seres vivos e o ambiente, com todos os elementos funcionando em conjunto para manter o equilíbrio da biodiversidade e dos ciclos naturais, mas com o passar do tempo os seres humanos só fazem estragar esses ambientes com desmatamento, queimadas e outras práticas que causam impactos ambientais terríveis.</p>
-
-            <p>Esses ecossistemas desempenham papeis essenciais na regulação dos processos naturais e na preservação da biodiversidade, e sua destruição afeta tanto o meio ambiente quanto a sociedade humana.</p>
-        </div>
+    <!-- Conteúdo principal da notícia -->
+<div class="content">
+    <div class="head">
+        <h1 class="title">Reprodução das Plantas 🌱</h1>
+        <p><h2 class="subtitle">Explorando os Fascinantes Métodos de Reprodução das Plantas e Sua Importância Ecológica</p>
     </div>
-    <div class="related-news">
-        <h2>Outras Notícias</h2>
-        <a href="noticia1.html">A Importância da Água no Ecossistema</a>
-        <a href="noticia2.html">Os Efeitos do Desmatamento no Clima</a>
-        <a href="noticia3.html">Como as Mudanças Climáticas Afetam a Biodiversidade</a>
+    <img src="1_20210908_180246_0000-1.webp" alt="Descrição da Imagem" class="image">
+    <div class="meta-info">
+        <img src="luiza.jpg" alt="Foto do Autor">
+        <p>Por <span class="highlight">Luíza Mattos</span> - 06 de novembro de 2024</p>
     </div>
+    <div class="content-text">
+        <h1>Reprodução sexuada e assexuada 🌷</h1>
+        <p>Na reprodução assexuada, novas plantas são formadas sem a fusão de gametas, e os descendentes são geneticamente idênticos. Exemplos:<br><br>
+            🌿 <strong>Estacas:</strong> Partes da planta (galhos ou raízes) geram novos indivíduos.<br><br>
+            🌿 <strong>Brotamento e Rizomas:</strong> Crescimento a partir de estruturas subterrâneas, como em bananeiras e gengibres.<br><br>
+            Já a reprodução sexuada nas plantas envolve a fusão de gametas masculinos e femininos.<br><br>
+            🌸 <strong>Polinização:</strong> Transporte de pólen para o estigma da flor.
+        </p>
 
-    <script>
-        // Atualiza a largura da barra de progresso conforme a rolagem da página
-        window.onscroll =[_{{{CITATION{{{_1{](https://github.com/hdquarters/nc.hemersonvianna/tree/12948b37e5526bdc478a71746c48bd02551b23f6/source%2F_posts%2F2019%2Fdia-28-css-grid-layout.md)[_{{{CITATION{{{_2{](https://github.com/lgfranco22/blog/tree/2ff765f5547038ea91aa40671858d9fd9d5ffb28/entrar.php)[_{{{CITATION{{{_3{](https://github.com/moeclay/pdw24jam_entry/tree/9606afcd7eba27990562194ec25565c642e33eab/application%2Fviews%2Fdashboard%2Fpersonal_point.php)[_{{{CITATION{{{_4{](https://github.com/Kudamoi/natalie/tree/0dc451d90b9a1ff39183d9940c3b6adbd3767c4a/header.php)[_{{{CITATION{{{_5{](https://github.com/Sadhik0905/REDANT/tree/61cef9f2d9ad893525d817948004a208cc746a3f/category.php)
+        <h1>O que é polinização? 🐝</h1>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/P5o_emokYbE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+        <p>🌼 <strong>Fecundação:</strong> Ocorre no ovário, formando uma semente, que gera uma nova planta.<br><br>
+            🌱 <strong>Dispersão das sementes:</strong> Reduz os níveis de predação nas proximidades dos adultos da mesma espécie, aumenta as chances de germinação das sementes e estabelece novos habitats favoráveis à colonização.
+        </p>
+
+        <h1>Ciclo de vida das plantas 🌿</h1>
+        <img src="Cresc_Vegetativo.jpg" alt="Descrição da Imagem" class="image">
+        <p>Germinação - Crescimento - Reprodução - Polinização - Formação do Fruto e Semente - Dispersão de Sementes<br><br>
+            Esse ciclo, chamado alternância de gerações, varia entre espécies, como musgos, samambaias e plantas com flores.
+        </p>
+
+        <p>🌍 Esses ecossistemas desempenham papeis essenciais na regulação dos processos naturais e na preservação da biodiversidade, e sua destruição afeta tanto o meio ambiente quanto a sociedade humana.</p>
+    </div>
+</div>
+
+<!-- Outras notícias -->
+<div class="related-news">
+    <a href="index.html"><h2>📚 Outras Notícias</h2></a><br>
+    <a href="noticia1.html">A Importância da Água no Ecossistema 💧</a>
+    <a href="noticia2.html">Os Efeitos do Desmatamento no Clima 🌳</a>
+    <a href="noticia3.html">Como as Mudanças Climáticas Afetam a Biodiversidade 🌍</a>
+</div>
+
+<!-- Rodapé -->
+<footer>
+    <p>&copy; 2024 The Gardem | Blog de Biologia. Todos os direitos reservados.</p>
+</footer>

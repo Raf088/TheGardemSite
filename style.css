@@ -3,7 +3,7 @@ html, body {
     margin: 0px;
     padding: 0px;
     width: 100%;
-    min-height: 200vh;
+    min-height: 100vh;
     overflow: auto;
     font-size: 16px; /* Tamanho base para rem */
 }
@@ -133,4 +133,50 @@ main {
 
 .linha {
     margin: 0 10em;
+}
+ footer {
+            background-color: #2C3C20 ;
+            font-family: 'poppins';
+            color: white;
+            text-align: center;
+            font-size: 12px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+.small-news {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    position: relative;
+   margin-top: -10%;
+   margin-bottom: 100px;
+  grid-area: 10;
+}
+
+.small-news .content-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.small-news img {
+    width: 100%;
+    height: auto;
+}
+
+.small-news .text {
+    font-size: 1.25rem; /* Define tamanho fixo para o título usando rem */
+}
+
+.small-news p {
+    font-family: 'Poppins';
+    font-weight: 300;
+}
+
+.main-content2{
+    z-index: 0;
+    display: flex;
+    width: auto;
+    margin-top: -20%;
+    
 }

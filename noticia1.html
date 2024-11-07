@@ -16,7 +16,7 @@
             margin: 0px;
             padding: 0px;
             width: 100%;
-            min-height: 200vh;
+            min-height: 240vh;
             overflow: auto;
             font-size: 16px;
         }
@@ -93,23 +93,6 @@
         .menu a:hover {
             border-bottom: #2C3C20 2px solid;
         }
-
-        .progress-container {
-            width: 100%;
-            height: 5px;
-            background-color: #e0e0e0;
-            position: fixed;
-            top: 25.vh;
-            left: 0;
-            z-index: 9999;
-        }
-
-        .progress-bar {
-            height: 100%;
-            width: 0%;
-            background-color: #2C3C20;
-        }
-
         .content {
             max-width: 800px;
             margin: auto;
@@ -194,16 +177,23 @@
         .related-news a:hover {
             text-decoration: underline;
         }
+        /* Rodapé */
+        footer {
+            background-color: #2C3C20 ;
+            font-family: 'poppins';
+            color: white;
+            text-align: center;
+            font-size: 12px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
- <!-- Barra de progresso -->
-    <div class="progress-container">
-        <div class="progress-bar" id="progress-bar"></div>
-    </div>
     <header class="cabeçalho">
         <div class="top-bar">
-            <p>©2024 The Gardem | Blog de Biologia</p>
+            <p>Blog de Biologia</p>
         </div>
         <div class="header">
             <h1 class="logo">THE GARDEM</h1>
@@ -243,12 +233,13 @@
         </div>
     </div>
     <div class="related-news">
-        <h2>Outras Notícias</h2>
+        <a><h2>Outras Notícias</h2></a><br>
         <a href="noticia1.html">A Importância da Água no Ecossistema</a>
         <a href="noticia2.html">Os Efeitos do Desmatamento no Clima</a>
         <a href="noticia3.html">Como as Mudanças Climáticas Afetam a Biodiversidade</a>
-    </div>
-
-    <script>
-        // Atualiza a largura da barra de progresso conforme a rolagem da página
-        window.onscroll =[_{{{CITATION{{{_1{](https://github.com/hdquarters/nc.hemersonvianna/tree/12948b37e5526bdc478a71746c48bd02551b23f6/source%2F_posts%2F2019%2Fdia-28-css-grid-layout.md)[_{{{CITATION{{{_2{](https://github.com/lgfranco22/blog/tree/2ff765f5547038ea91aa40671858d9fd9d5ffb28/entrar.php)[_{{{CITATION{{{_3{](https://github.com/moeclay/pdw24jam_entry/tree/9606afcd7eba27990562194ec25565c642e33eab/application%2Fviews%2Fdashboard%2Fpersonal_point.php)[_{{{CITATION{{{_4{](https://github.com/Kudamoi/natalie/tree/0dc451d90b9a1ff39183d9940c3b6adbd3767c4a/header.php)[_{{{CITATION{{{_5{](https://github.com/Sadhik0905/REDANT/tree/61cef9f2d9ad893525d817948004a208cc746a3f/category.php)
+    </div>  
+    <footer>
+        <p>&copy; 2024 The Gardem | Blog de Biologia. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
