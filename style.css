@@ -129,18 +129,18 @@ footer {
   padding: 1em 0;
 }
 
-/* Estilo para a notícia principal com imagem e texto lado a lado */
+/* Estilo para a notícia principal com imagem e texto lado a lado 
 .horizontal-layout {
   display: flex;
   align-items: center;
   gap: 1em; /* Espaço entre a imagem e o texto */
-  max-width: 800px;
+  max-width: 900px;
   margin: 2em auto;
 }
 
 .horizontal-layout .image-placeholder {
   width: 50%; /* Define a largura da imagem */
-  height: 200px;
+  height: 400px;
   background-color: #ccc;
   border-radius: 8px;
 }

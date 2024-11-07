@@ -12,126 +12,102 @@
     <link href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Suez+One&display=swap" rel="stylesheet">
     <style>
         html, body {
-            background-color: #f8f7f7;
-            margin: 0px;
-            padding: 0px;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
             width: 100%;
-            min-height: 240vh;
-            overflow: auto;
+            min-height: 100vh;
             font-size: 16px;
         }
-
-        .top-bar {
-            z-index: 999999999;
-            position: fixed;
-            width: 100%;
-            height: 5vh;
-            text-align: center;
-            font-family: 'Poppins';
-            font-size: 0.9rem;
-            top: 0%;
-            background-color: white;
-        }
-
+       
         .header {
-            z-index: 99999999;
+            z-index: 999;
             width: 100%;
+            max-width: 100vw;
             height: 9vh;
             position: fixed;
-            top: 5vh;
+            top: 0;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             background-color: white;
+            padding: 0 1.5em;
+            box-sizing: border-box;
         }
 
         .logo {
             font-size: 2rem;
-            font-family: 'Poppins';
-            color: #2C3C20;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            font-family: "Poppins", sans-serif;
+            color: #2c3c20;
         }
 
         .subscribe-button {
-            position: absolute;
             border-radius: 1.8em;
             border: none;
-            padding: 0.9em;
-            background-color: #2C3C20;
+            padding: 0.9em 1.5em;
+            background-color: #2c3c20;
             color: #f8f7f7;
-            font-family: 'Poppins';
+            font-family: "Poppins", sans-serif;
             font-weight: bold;
-            right: 4em;
             cursor: pointer;
         }
 
         .menu {
-            z-index: 1;
             position: fixed;
             width: 100%;
             height: 5vh;
-            top: 14vh;
+            top: 9vh;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 2em;
-            border-bottom: #c4c4c4 1px solid;
-            border-top: #c4c4c4 1px solid;
+            border-top: 1px solid #c4c4c4;
+            border-bottom: 1px solid #c4c4c4;
             background-color: white;
+            z-index: 998;
         }
 
         .menu a {
             text-decoration: none;
             color: black;
-            font-family: 'Poppins';
-            font-size: 0.875rem;
-            text-align: center;
+            font-family: "Poppins", sans-serif;
+            font-size: 1rem;
         }
 
-        .menu a:hover {
-            border-bottom: #2C3C20 2px solid;
-        }
         .content {
             max-width: 800px;
             margin: auto;
             padding: 20px;
-            padding-top: 22vh;
+            padding-top: 25vh;
         }
 
         .title {
             font-family: 'Noticia Text';
-            font-size: 50px;
-            font-weight: 600;
+            font-size: 60px;
             margin: 10px 0;
         }
 
         .subtitle {
             font-family: 'Poppins';
-            font-size: 14px;
-            color: #555;
+            font-weight: 300;
+            font-size: 20px;
             margin: 10px 0;
         }
 
         .meta-info {
-            width: 100%;
-            height: 5vh;
-            font-size: 20px;
+            font-size: 25px;
             font-family: 'Poppins';
-            padding-bottom: 15px;
-            color: #000000;
             display: flex;
             align-items: center;
-            border-top: #000000 1px solid ;
-            border-bottom: #000000 1px solid ;
-            padding: 10px;
-            margin-top: 2em;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            background-color: #f0f0f0;
         }
 
         .meta-info img {
-            width: 50px;
-            height: 50px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             margin-right: 10px;
         }
@@ -144,102 +120,223 @@
         }
 
         .content-text {
-            font-family: 'Poppins';
-            font-size: 16px;
-            text-align: justify;
+            font-family:'Poppins';
+            font-size: 20px;
             line-height: 1.6;
-            color: #333;
+            color: #000000;
             margin-top: 20px;
+            text-align: justify;
         }
 
         .highlight {
             font-weight: bold;
             color: #2C3C20;
         }
-           /* Estilos para a seção de outras notícias */
-           .related-news {
+
+        .related-news {
             margin-top: 40px;
-            padding-top: 20px;
             padding-bottom: 20px;
+            position: relative;
             border-top: 2px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .related-news h2 {
+            font-size: 60px;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 5vh;
+        }
+        
+        .related-news-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center; /* Centraliza os itens na linha */
+            max-width: 1200px;
+        }
+        
+        .related-news-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 300px; /* Define a largura de cada item */
+            margin-bottom: 20px;
             text-align: center;
         }
-
-        .related-news a {
-            font-family: 'Poppins';
-            font-size: 1rem;
-            color: #2C3C20;
+        
+        .related-news-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        .related-news-content a {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
             text-decoration: none;
-            margin: 10px;
-            display: inline-block;
+            margin-top: 10px;
         }
+        
+        .related-news-content p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .related-news-items {
+                flex-direction: column; /* Coloca os itens em coluna no celular */
+                align-items: center;
+            }
+        
+            .related-news-item {
+                width: 100%; /* Cada item ocupa toda a largura da tela menor */
+            }
+        }
+        
+}
 
-        .related-news a:hover {
-            text-decoration: underline;
-        }
-        /* Rodapé */
+
         footer {
-            background-color: #2C3C20 ;
-            font-family: 'poppins';
+            background-color: #2C3C20;
             color: white;
             text-align: center;
             font-size: 12px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 1em;
         }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 20px;
+        }
+        footer {
+            background-color: #2c3c20;
+            font-family: "Poppins", sans-serif;
+            color: white;
+            text-align: center;
+            font-size: 12px;
+            padding: 1em 0;
+          }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header {
+                padding: 0 1em;
+            }
+        }
+        /* Responsividade para meta-info */
+@media (max-width: 768px) {
+    .meta-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
     </style>
 </head>
 <body>
-    <header class="cabeçalho">
-        <div class="top-bar">
-            <p>Blog de Biologia</p>
-        </div>
-        <div class="header">
-            <h1 class="logo">THE GARDEM</h1>
-            <button class="subscribe-button">ASSINE JÁ</button>
-        </div>
+    <main>
+    <div class="header">
+        <h1 class="logo">THE GARDEM</h1>
+        <button class="subscribe-button">ASSINE JÁ</button>
+      </div>
 
-        <div class="menu" id="menu">
-            <a href="index.html">Página Inicial</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="contato.html">Contato</a>
-        </div>
+      <nav class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </header>
     </header>
 
     <!-- Conteúdo principal da notícia -->
-    <div class="content">
-        <div class="head">
-            <h1 class="title">A Importância das Plantas no Ecossistema</h1>
+    <!-- Conteúdo principal da notícia -->
+<div class="content">
+    <div class="head">
+        <h1 class="title">A Importância das Plantas no Ecossistema</h1>
+        <p><h2 class="subtitle">Explorando os Fascinantes Métodos de Reprodução das Plantas e Sua Importância Ecológica</p>
+    </div>
+    <img src="amazoniamacron.webp" alt="Descrição da Imagem" class="image">
+    <div class="meta-info">
+        <img src="luiza.jpg" alt="Foto do Autor">
+        <p>Por <span class="highlight">Luíza Mattos</span> - 06 de novembro de 2024</p>
+    </div>
+    <div class="content-text">
+        <h1>As Plantas e o Ecossistema</h1>
+        <p>As plantas são essenciais para a vida na Terra, sendo responsáveis por gerar <span class="highlight">oxigênio</span>, <span class="highlight">alimento</span>, <span class="highlight">fibras</span>, <span class="highlight">combustíveis</span> e <span class="highlight">remédios</span> que permitem aos humanos e outras formas de vida existirem. Elas também são essenciais para o controle da <span class="highlight">temperatura</span> da Terra e o equilíbrio da água no planeta.</p>
+
+        <p>Enquanto realizam tudo isso, as plantas ainda absorvem <span class="highlight">dióxido de carbono</span>, um importante gás do efeito estufa, através do processo de <span class="highlight">fotossíntese</span>.</p>
+
+        <h1>Agricultura e a Biodiversidade</h1>
+        <p>Desde os primórdios da humanidade, o homem criou o “hábito” de coletar sementes e plantar, o que evoluiu para o que conhecemos hoje como <span class="highlight">agricultura</span>. A agricultura é a base da subsistência e da economia global, além de ser crucial para a <span class="highlight">produção de alimentos</span>.</p>
+
+        <p>Toda a cadeia alimentar depende das plantas, inclusive os animais de criação, como o gado, que consomem vegetação. Em outras palavras, plantas são a base de quase todas as <span class="highlight">teias alimentares</span>, ou como os ecólogos chamam, o nível trófico básico.</p>
+
+        <p>Sem contar na questão da <span class="highlight">biodiversidade</span>: "As plantas, por exemplo, são a base de toda a cadeia alimentar, além de servirem de moradia para várias espécies e fornecerem oxigênio no processo de fotossíntese. Quando uma espécie entra em extinção, todo o ecossistema local é impactado."</p>
+
+        <h1>Ecossistemas Equilibrados e Sua Destruição</h1>
+        <img src="fogoamazonia.jpg" alt="Descrição da Imagem" class="image">
+
+        <p>Um ecossistema equilibrado é aquele em que há harmonia entre os seres vivos e o ambiente, com todos os elementos funcionando em conjunto para manter o equilíbrio da <span class="highlight">biodiversidade</span> e dos ciclos naturais.</p>
+
+        <p>Infelizmente, práticas humanas como <span class="highlight">desmatamento</span> e <span class="highlight">queimadas</span> têm causado impactos ambientais devastadores, ameaçando esses ecossistemas. Esse processo não só prejudica o meio ambiente, mas também impacta diretamente a sociedade humana.</p>
+
+     </div>
+</div>
+
+<!-- Outras notícias -->
+<!-- Outras notícias -->
+<div class="related-news">
+    <h2>OUTRAS NOTÍCIAS</h2>
+    <div class="related-news-items">
+        <div class="related-news-item">
+            <img src="amazoniamacron.webp" alt="">
+            <div class="related-news-content">
+                <a href="noticia1.html">Notícia 2</a>
+                <p>Resumo da notícia, incluindo detalhes sobre o impacto ecológico das plantas.</p>
+            </div>
         </div>
-        <img src="amazoniamacron.webp" alt="Descrição da Imagem" class="image">
-        <div class="meta-info">
-            <img src="luiza.jpg" alt="Foto do Autor">
-            <p>Por <span class="highlight">Luíza Mattos </span>- 06 de novembro de 2024</p>
+        <div class="related-news-item">
+            <img src="amazoniamacron.webp" alt="">
+            <div class="related-news-content">
+                <a href="noticia2.html">Noticia 3</a>
+                <p>Resumo sobre como o desmatamento influencia o clima global e a biodiversidade.</p>
+            </div>
         </div>
-        <div class="content-text">
-            <h1>As Plantas e o Ecossistema</h1>
-            <p>As <span class="highlight">plantas</span> são essenciais para a vida na Terra, são responsáveis por gerar oxigênio, alimento, fibras, combustíveis e remédios que permitem aos humanos e outras formas de vida existir. Elas também são essenciais para o controle da temperatura da Terra e o equilíbrio e dinâmica da água no planeta. Enquanto realizam tudo isso, as plantas ainda absorvem dióxido de carbono, um importante gás do efeito estufa, através da fotossíntese.</p>
-            
-            <h1>Agricultura e a Biodiversidade</h1>
-            <p>Desde os primórdios da humanidade, o homem criou o <span class="highlight">"hábito"</span>, por assim dizer, de juntar sementes e plantar, e durante toda a história podemos observar o desenvolvimento dessa prática, que hoje já é bem avançada, a agricultura. Por mais que muitas pessoas não reparem, as plantas foram e são, os pilares da prática agrícola, assim, movimentando a subsistência, a economia e principalmente da produção de alimentos, todo alimento que consumimos provém das plantas.</p>
-
-            <p>Até o gado que comemos, que por sua vez, depende das plantas para se alimentar. Em outras palavras, plantas são a base de quase todas as teias alimentares, ou o que os ecólogos chamam de nível trófico. Sem contar na questão da <span class="highlight">biodiversidade</span>: "As plantas, por exemplo, são a base de toda a cadeia alimentar, além de servirem de moradia para algumas espécies e fornecerem oxigênio no processo de fotossíntese. Quando uma espécie entra em extinção, todo o ecossistema local é impactado."</p>
-
-            <h1>Ecossistemas equilibrados e sua destruição</h1>
-            <p>Um <span class="highlight">ecossistema equilibrado</span> é aquele onde há harmonia entre os seres vivos e o ambiente, com todos os elementos funcionando em conjunto para manter o equilíbrio da biodiversidade e dos ciclos naturais, mas com o passar do tempo os seres humanos só fazem estragar esses ambientes com desmatamento, queimadas e outras práticas que causam impactos ambientais terríveis.</p>
-
-            <p>Esses ecossistemas desempenham papeis essenciais na regulação dos processos naturais e na preservação da biodiversidade, e sua destruição afeta tanto o meio ambiente quanto a sociedade humana.</p>
+        <div class="related-news-item">
+            <img src="amazoniamacron.webp" alt="">
+            <div class="related-news-content">
+                <a href="noticia3.html">Notícia 4</a>
+                <p>Explicação dos efeitos das mudanças climáticas na biodiversidade do planeta.</p>
+            </div>
         </div>
     </div>
-    <div class="related-news">
-        <a><h2>Outras Notícias</h2></a><br>
-        <a href="noticia1.html">A Importância da Água no Ecossistema</a>
-        <a href="noticia2.html">Os Efeitos do Desmatamento no Clima</a>
-        <a href="noticia3.html">Como as Mudanças Climáticas Afetam a Biodiversidade</a>
-    </div>  
-    <footer>
-        <p>&copy; 2024 The Gardem | Blog de Biologia. Todos os direitos reservados.</p>
-    </footer>
-</body>
-</html>
+</div>
+
+
+
+<!-- Rodapé -->
+<footer>
+    <p>&copy; 2024 The Gardem | Blog de Biologia. Todos os direitos reservados.</p>
+</footer>
+</main>

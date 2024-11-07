@@ -12,14 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Suez+One&display=swap" rel="stylesheet">
     <style>
         html, body {
-            background-color: #f8f7f7;
+            background-color: #ffffff;
             margin: 0;
             padding: 0;
             width: 100%;
             min-height: 100vh;
             font-size: 16px;
         }
-
+       
         .header {
             z-index: 999;
             width: 100%;
@@ -83,29 +83,30 @@
 
         .title {
             font-family: 'Noticia Text';
-            font-size: 2.5rem;
+            font-size: 60px;
             margin: 10px 0;
         }
 
         .subtitle {
+            font-family: 'Poppins';
             font-weight: 300;
-            font-size: 1.125rem;
+            font-size: 20px;
             margin: 10px 0;
         }
 
         .meta-info {
+            font-size: 25px;
+            font-family: 'Poppins';
             display: flex;
             align-items: center;
-            font-size: 1rem;
-            border-top: 1px solid #000;
-            border-bottom: 1px solid #000;
+            border-radius: 10px;
             padding: 20px;
-            margin-top: 2em;
+            background-color: #f0f0f0;
         }
 
         .meta-info img {
-            width: 50px;
-            height: 50px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             margin-right: 10px;
         }
@@ -118,9 +119,10 @@
         }
 
         .content-text {
-            font-size: 1rem;
+            font-family:'Poppins';
+            font-size: 20px;
             line-height: 1.6;
-            color: #333;
+            color: #000000;
             margin-top: 20px;
             text-align: justify;
         }
@@ -132,23 +134,74 @@
 
         .related-news {
             margin-top: 40px;
-            padding-top: 20px;
             padding-bottom: 20px;
+            position: relative;
             border-top: 2px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .related-news h2 {
+            font-size: 60px;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 5vh;
+        }
+        
+        .related-news-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center; /* Centraliza os itens na linha */
+            max-width: 1200px;
+        }
+        
+        .related-news-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 300px; /* Define a largura de cada item */
+            margin-bottom: 20px;
             text-align: center;
         }
-
-        .related-news a {
-            font-size: 1rem;
-            color: #2C3C20;
+        
+        .related-news-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        .related-news-content a {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
             text-decoration: none;
-            margin: 10px;
-            display: inline-block;
+            margin-top: 10px;
         }
+        
+        .related-news-content p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .related-news-items {
+                flex-direction: column; /* Coloca os itens em coluna no celular */
+                align-items: center;
+            }
+        
+            .related-news-item {
+                width: 100%; /* Cada item ocupa toda a largura da tela menor */
+            }
+        }
+        
+}
 
-        .related-news a:hover {
-            text-decoration: underline;
-        }
 
         footer {
             background-color: #2C3C20;
@@ -175,21 +228,33 @@
             border: none;
             border-radius: 20px;
         }
+        footer {
+            background-color: #2c3c20;
+            font-family: "Poppins", sans-serif;
+            color: white;
+            text-align: center;
+            font-size: 12px;
+            padding: 1em 0;
+          }
 
         /* Responsividade */
         @media (max-width: 768px) {
-            .meta-info {
-                flex-direction: column;
-                text-align: center;
-            }
-
             .header {
                 padding: 0 1em;
             }
         }
+        /* Responsividade para meta-info */
+@media (max-width: 768px) {
+    .meta-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
     </style>
 </head>
 <body>
+    <main>
     <div class="header">
         <h1 class="logo">THE GARDEM</h1>
         <button class="subscribe-button">ASSINE JÁ</button>
@@ -207,7 +272,7 @@
     <!-- Conteúdo principal da notícia -->
 <div class="content">
     <div class="head">
-        <h1 class="title">Reprodução das Plantas 🌱</h1>
+        <h1 class="title">Reprodução das Plantas</h1>
         <p><h2 class="subtitle">Explorando os Fascinantes Métodos de Reprodução das Plantas e Sua Importância Ecológica</p>
     </div>
     <img src="noticia2.webp" alt="Descrição da Imagem" class="image">
@@ -216,7 +281,7 @@
         <p>Por <span class="highlight">Luíza Mattos</span> - 06 de novembro de 2024</p>
     </div>
     <div class="content-text">
-        <h1>Reprodução sexuada e assexuada 🌷</h1>
+        <h1>Reprodução sexuada e assexuada</h1>
         <p>Na reprodução assexuada, novas plantas são formadas sem a fusão de gametas, e os descendentes são geneticamente idênticos. Exemplos:<br><br>
             🌿 <strong>Estacas:</strong> Partes da planta (galhos ou raízes) geram novos indivíduos.<br><br>
             🌿 <strong>Brotamento e Rizomas:</strong> Crescimento a partir de estruturas subterrâneas, como em bananeiras e gengibres.<br><br>
@@ -224,7 +289,7 @@
             🌸 <strong>Polinização:</strong> Transporte de pólen para o estigma da flor.
         </p>
 
-        <h1>O que é polinização? 🐝</h1>
+        <h1>O que é polinização?</h1>
         <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/P5o_emokYbE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -235,7 +300,7 @@
 
         <h1>Ciclo de vida das plantas 🌿</h1>
         <img src="Cresc_Vegetativo.jpg" alt="Descrição da Imagem" class="image">
-        <p>Germinação - Crescimento - Reprodução - Polinização - Formação do Fruto e Semente - Dispersão de Sementes<br><br>
+        <p>Germinação ➔ Crescimento ➔ Reprodução ➔ Polinização ➔ Formação do Fruto e Semente ➔ Dispersão de Sementes<br><br>
             Esse ciclo, chamado alternância de gerações, varia entre espécies, como musgos, samambaias e plantas com flores.
         </p>
 
@@ -244,14 +309,38 @@
 </div>
 
 <!-- Outras notícias -->
+<!-- Outras notícias -->
 <div class="related-news">
-    <a href="index.html"><h2>📚 Outras Notícias</h2></a><br>
-    <a href="noticia1.html">A Importância da Água no Ecossistema 💧</a>
-    <a href="noticia2.html">Os Efeitos do Desmatamento no Clima 🌳</a>
-    <a href="noticia3.html">Como as Mudanças Climáticas Afetam a Biodiversidade 🌍</a>
+    <h2>OUTRAS NOTÍCIAS</h2>
+    <div class="related-news-items">
+        <div class="related-news-item">
+            <img src="amazoniamacron.webp" alt="">
+            <div class="related-news-content">
+                <a href="noticia1.html">A Importância das Plantas no Ecossistema</a>
+                <p>Resumo da notícia, incluindo detalhes sobre o impacto ecológico das plantas.</p>
+            </div>
+        </div>
+        <div class="related-news-item">
+            <img src="amazoniamacron.webp" alt="">
+            <div class="related-news-content">
+                <a href="noticia2.html">Os Efeitos do Desmatamento no Clima 🌳</a>
+                <p>Resumo sobre como o desmatamento influencia o clima global e a biodiversidade.</p>
+            </div>
+        </div>
+        <div class="related-news-item">
+            <img src="amazoniamacron.webp" alt="">
+            <div class="related-news-content">
+                <a href="noticia3.html">Como as Mudanças Climáticas Afetam a Biodiversidade 🌍</a>
+                <p>Explicação dos efeitos das mudanças climáticas na biodiversidade do planeta.</p>
+            </div>
+        </div>
+    </div>
 </div>
+
+
 
 <!-- Rodapé -->
 <footer>
     <p>&copy; 2024 The Gardem | Blog de Biologia. Todos os direitos reservados.</p>
 </footer>
+</main>
